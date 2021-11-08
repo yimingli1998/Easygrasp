@@ -20,7 +20,7 @@ TODO
 
 
 
-### Generate scene datasets
+## Generate scene datasets
 
 We recommend **BlenderProc** to generate table-level cluttered scenes.
 
