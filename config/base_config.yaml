@@ -1,0 +1,55 @@
+num_images:           32000
+num_scenes:           1000
+num_images_per_scene:   32
+num_train_objects:      40
+num_grasps_per_point:   20
+use_base_coordinate:    True
+noise:
+  sigma:                0.005
+filter:
+  score_thresh:         0.5
+  width_thresh:         0.08
+vis:
+  vis_pointcloud:       True
+  vis_scene:            True
+  vis_handmesh:         True
+color:
+  pointcloud:           [0,100,100]
+  bad_point:            [0,0,255]
+  good_point:           [0,255,0]
+  hand_mesh:            [255,255,0]
+dataset:
+  num_points:           20000
+  use_norm_points:      True
+  sample_planar_rate:   0.05
+train:
+  batchsize:        8
+  learning_rate:    0.01
+  epoches:          80
+  gpu:              '0'
+  optimizer:        'Adam'
+  workers:          8
+  theme:            test
+  gp_weight:        [1,2]
+  printfreq:        50
+  use_bin_loss:     True
+eval:
+  model_path:       'experiment/20211109_235018_test/checkpoints'
+  epoch:            63
+  dist_thresh:      0.05
+  angle_thresh:     30
+  quat_thresh:      60
+bin_loss:
+  azimuth_scope:        360
+  azimuth_bin_size:     60
+  elevation_scope:      180
+  elevation_bin_size:   30
+  grasp_angle_scope:    180
+  grasp_angle_bin_size: 30
+  depth_scope:          4
+  depth_bin_size:       1
+  width_scope:          8
+  width_bin_size:       1
+  score_scope:          4
+  score_bin_size:       1
+
